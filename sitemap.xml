@@ -28,11 +28,6 @@
   </url>
   
   <url>
-    <loc>https://ang.dev/</loc>
-    <lastmod>2019-03-01T23:20:57+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://ang.dev/tags/ajax/</loc>
     <lastmod>2019-03-02T10:59:55+09:00</lastmod>
     <priority>0</priority>
@@ -136,6 +131,12 @@
   <url>
     <loc>https://ang.dev/tags/webpack/</loc>
     <lastmod>2019-03-02T10:59:56+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ang.dev/</loc>
+    <lastmod>2019-03-01T23:20:57+09:00</lastmod>
     <priority>0</priority>
   </url>
   
