@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Promise on ang.dev</title>
+    <link>https://ang.dev/tags/promise/</link>
+    <description>Recent content in Promise on ang.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Wed, 21 Dec 2016 06:07:32 +0000</lastBuildDate>
+    
+	<atom:link href="https://ang.dev/tags/promise/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>내가 fetch API를 쓰지 못했던 이유</title>
+      <link>https://ang.dev/posts/2016-12-21_fetch-api/</link>
+      <pubDate>Wed, 21 Dec 2016 06:07:32 +0000</pubDate>
+      
+      <guid>https://ang.dev/posts/2016-12-21_fetch-api/</guid>
+      <description>내가 fetch API를 쓰지 못했던 이유 fetch API 는 완벽한가? TL;DR 많은 API 요청이 있는 SPA에선 페이지 전환 시 요청을 취소해주자 모든 라이브러리가 AJAX 요청 취소를 지원하지는 않</description>
+    </item>
+    
+  </channel>
+</rss>

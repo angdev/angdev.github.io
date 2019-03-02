@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Twitter on ang.dev</title>
+    <link>https://ang.dev/tags/twitter/</link>
+    <description>Recent content in Twitter on ang.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Fri, 27 Jan 2017 08:11:33 +0000</lastBuildDate>
+    
+	<atom:link href="https://ang.dev/tags/twitter/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>포켓몬 고 나왔니?</title>
+      <link>https://ang.dev/posts/2017-01-27_pokemon-go/</link>
+      <pubDate>Fri, 27 Jan 2017 08:11:33 +0000</pubDate>
+      
+      <guid>https://ang.dev/posts/2017-01-27_pokemon-go/</guid>
+      <description>포켓몬 고 나왔니? 178일간의 기록 안녕하세요. 포켓몬 고 나왔니? 봇주 @angdev 입니다. 이번에 포켓몬 고 나왔니 봇을 만들기부터 역할 완수까지의 과정이 즐거웠어서 이</description>
+    </item>
+    
+  </channel>
+</rss>

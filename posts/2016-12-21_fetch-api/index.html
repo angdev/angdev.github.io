@@ -1,0 +1,209 @@
+<!DOCTYPE html><html>
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>내가 fetch API를 쓰지 못했던 이유 | ang.dev</title>
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link rel="stylesheet" href="/normalize.min.css">
+
+<link rel="stylesheet" href="/book.min.29d743ffb6d61ecbfc9bb21b7eab17d63b577d4bd547c3f095addb1c793ab1b1.css">
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  <link rel="stylesheet" href="/css/custom.css">
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav role="navigation">
+<h2 class="book-brand">
+  <a href="https://ang.dev">ang.dev</a>
+</h2>
+
+
+
+    
+  
+  
+
+  <style>
+  nav ul a[href$="\2fposts\2f 2016-12-21_fetch-api\2f "] {
+      color: #004ed0;
+  }
+  </style><ul>
+<li><a href="/about">About</a></li>
+<li><a href="/posts">Blog</a></li>
+</ul>
+
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+</nav>
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" />
+  </label>
+  <strong>내가 fetch API를 쓰지 못했던 이유</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="내가-fetch-api를-쓰지-못했던-이유">내가 fetch API를 쓰지 못했던 이유</h1>
+
+<h2 id="fetch-api-는-완벽한가">fetch API 는 완벽한가?</h2>
+
+<h3 id="tl-dr">TL;DR</h3>
+
+<ul>
+<li>많은 API 요청이 있는 SPA에선 페이지 전환 시 요청을 취소해주자</li>
+<li>모든 라이브러리가 AJAX 요청 취소를 지원하지는 않는다</li>
+<li>fetch API 는 요청을 취소할 수 있는 기능을 제공하지 않는다&gt; 글 작성 편의상 경어를 생략하였음을 미리 알려드립니다.</li>
+</ul>
+
+<p>SPA 형태의 앱은 주로 서버와 API 로 데이터를 주고 받으면서 화면을 그리게 된다. 한 페이지에서 API 요청이 끝나지 않았는데 페이지를 떠나는 경우를 생각해보자. <strong>당신이 지금 만들고 있는 앱은 기존 요청을 취소하는가?</strong> 한 페이지에서 많은 수의 요청을 부르거나 적은 수의 요청을 하더라도 응답 속도가 느린 경우에 이는 문제가 될 수 있다. MPA (Multi Page Application) 와 다르게 이전 페이지에서 끝나지 않은 요청이 다음 페이지에서 이어지기 때문인데, 일반적으로 웹 브라우저에서 동시에 요청할 수 있는 요청의 수는 6개 정도로 제한되어 있다. 다음 페이지에서 필요한 요청이 계속 Stale 되면 페이지 렌더링이 안되기 때문에 이는 사용자 경험 저하로 이어진다. (혹은 사용자로 하여금 새로고침을 하게 만들면 된다.) React 앱이라면 뒤늦게 액션이 생성되어 상태 업데이트를 해대느라 느려지기도 한다.</p>
+
+<p>이 문제는 서버 관점과 클라이언트 관점 두 가지로 나누어서 해결할 수 있다. 첫 번째 방법은 서버 응답이 빨라지도록 하거나 요청 수가 적어지도록 응답 모델을 디자인하는 것이다. 하지만 우리는 서버 개발자를 괴롭히지 않는 멋진 개발자이니 원론적으로 두 번째 방법인 요청을 취소하는 것에 대해서 이야기를 해볼 것이다. 필자의 경험에 기초를 두고 글을 전개할 것이므로 <strong>React + React Router + Redux</strong> 기반으로 이를 구현하는 것에 대해 이야기를 해보려고 한다.</p>
+
+<h2 id="문제의-파악">문제의 파악</h2>
+
+<figure>
+    <img src="/posts/2016-12-21_fetch-api/images/1.png"/> <figcaption>
+            <h4>많은 수의 요청이 해결되지 못하고 있는 상태 (극단적인 상황이지만)</h4>
+        </figcaption>
+</figure>
+
+
+<p>한 페이지에서 불리는 API 가 많은데, 많은 페이지 전환이 일어나는 경우에 위와 같은 상황이 현재 페이지에 필요한 API 요청이 끝나지 못하고 Pending 되어 있는 것을 목격할 수도 있다. 페이지 전환 시에는 전환 전에 불렸던 API 들은 취소해줄 필요가 있다.</p>
+
+<figure>
+    <img src="/posts/2016-12-21_fetch-api/images/2.png"/> <figcaption>
+            <h4>취소가 되면 바로 현재 페이지의 요청을 처리할 수 있다</h4>
+        </figcaption>
+</figure>
+
+
+<h2 id="문제의-해결">문제의 해결</h2>
+
+<p>필자의 경우에는 아래와 같이 액션을 통해 API 를 요청하였다.</p>
+
+<figure>
+    <img src="/posts/2016-12-21_fetch-api/images/3.png"/> <figcaption>
+            <h4>이 방식은 [redux real-world example](https://github.com/reactjs/redux/tree/master/examples/real-world) 에서 참고할 수 있다</h4>
+        </figcaption>
+</figure>
+
+
+<p>이를 redux apiMiddleware 등에서 잡아서 실제 요청을 생성하는 방식으로 구현하였다. 그렇다면 이 때 생성되는 XHRHttpRequest 에 준하는 abortable request object 를 보관하고 있다가 (Requests) 다음 페이지 로딩이 될 때 이를 순회하며 abort 후 제거하면 된다.</p>
+
+<figure>
+    <img src="/posts/2016-12-21_fetch-api/images/4.png"/> 
+</figure>
+
+
+<p>react-router 와 <a href="https://github.com/reactjs/react-router-redux">react-router-redux</a> 를 쓰는 경우에는 location change 에 대한 액션을 받을 수 있기 때문에, 이에 반응하도록 구현할 수 있다. 간단히 아래와 같이 구현해볼 수 있다.</p>
+
+<p>예시 구현</p>
+
+<h2 id="추가적인-고려사항">추가적인 고려사항</h2>
+
+<p>API Request 액션에 대해서 Optimisitic update 를 하는 경우라면 이를 Rollback 해줘야 할 것이므로 Optimistic update rollback 을 유발하는 액션을 내보내는 등의 작업이 필요할 수 있다. 즉 side-effect 가 없을지 충분히 고려할 필요가 있다.</p>
+
+<h2 id="혹시-fetch-api를-쓰고-있다면">혹시 fetch API를 쓰고 있다면</h2>
+
+<p>API 요청의 취소는 간단하다. <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a> 에서 <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/abort">abort</a> 메서드를 제공하고 있기 때문에 이를 호출하는 것으로 취소시킬 수가 있다. 혹은 라이브러리에서 제공하는 메서드를 사용하면 될 것이다.</p>
+
+<p>하지만 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">fetch API</a> 에서는 요청을 취소할 방법이 없다! 놀랍게도 이는 현재 (2016년 12월) 까지 <a href="https://github.com/whatwg/fetch/issues/27">사실</a>이다.</p>
+
+<figure>
+    <img src="/posts/2016-12-21_fetch-api/images/5.png"/> <figcaption>
+            <h4>2015년 3월부터 현재까지 논의 중이다 (313 개의 댓글…)</h4>
+        </figcaption>
+</figure>
+
+
+<figure>
+    <img src="/posts/2016-12-21_fetch-api/images/6.png"/> <figcaption>
+            <h4>필자도 믿기지 않는다</h4>
+        </figcaption>
+</figure>
+
+
+<figure>
+    <img src="/posts/2016-12-21_fetch-api/images/7.png"/> <figcaption>
+            <h4>“fetch 스펙이 정말로 불완전하다는 것을 보여주고 있다” 라는 의견도 있다</h4>
+        </figcaption>
+</figure>
+
+
+<p>기본적으로 fetch API 는 Promise 기반으로 동작하는데, 아직 Promise 를 취소할 수 있는 방법이 제시되지 못한 것도 이 문제가 빨리 풀리지 못하는데에 한몫을 하고 있다. 이는 <a href="https://github.com/tc39/proposal-cancelable-promises">Cancelable Promise</a> 가 등장하는 것으로 좀 정리가 될 수 있지 않을까 기대를 하고 있었으나 <strong>안타깝게도 2016년 12월 16일자로 이 Proposal 이 철회</strong>됐다. fetch가 아닌 다른 Promise 기반의 ajax 라이브러리인 <a href="https://github.com/mzabriskie/axios">axios</a> 는 Cancelable Promise 형태로 이를 <a href="https://github.com/mzabriskie/axios#cancellation">구현해두었다</a>.</p>
+
+<p>만약 abort 를 해야할 필요성을 느낀다면 어쩔 수 없다. fetch API 에서 <a href="https://github.com/mzabriskie/axios">axios</a> 나 <a href="https://github.com/visionmedia/superagent">superagent</a> 과 같은 다른 라이브러리로 변경해야 한다.</p>
+
+<h2 id="결론">결론</h2>
+
+<p>fetch API 는 server, client 에서 간편하게 사용이 가능하지만 요청 취소가 불가능하는 등의 아쉬운 점이 있어 요청 취소 기능이 필요한 경우가 있다면 다른 라이브러리를 고려해보는 것이 좋겠다.이 글이 많은 분들께 도움이 됐으면 좋겠습니다. 피드백은 언제나 환영합니다. <a href="http://twitter.com/angdev_">@angdev</a> 로 멘션 주시면 감사하겠습니다 (_ _) 궁금하시거나 이야기하고 싶은 점이 있으신 분은 <a href="https://gitter.im/little-big-programming/Lobby">Little Big Programming Gitter</a> 에서 이야기 나눠요!</p>
+
+<p><a href="https://gitter.im/little-big-programming/Lobby">little-big-programming/Lobby</a></p>
+
+<h2 id="글쓴이에-대해서">글쓴이에 대해서</h2>
+
+<p>이번에도 Frontend 에 대한 글을 쓰긴 했지만 원래는 Backend 에 더 힘을 쏟고 싶은 사람입니다. 생업으로 Ruby on Rails 를 하고 있습니다. Docker 를 열심히 굴리는 중이고, AWS로 인프라 구축하는 것에 재미를 붙였습니다. Kubernetes 와 같은 Orchestration Tool 과 Ruby, Elixir, Javascript, C++ 등에 관심이 많습니다.</p>
+</article>
+
+      
+
+    </div>
+
+    
+  
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#내가-fetch-api를-쓰지-못했던-이유">내가 fetch API를 쓰지 못했던 이유</a>
+<ul>
+<li><a href="#fetch-api-는-완벽한가">fetch API 는 완벽한가?</a>
+<ul>
+<li><a href="#tl-dr">TL;DR</a></li>
+</ul></li>
+<li><a href="#문제의-파악">문제의 파악</a></li>
+<li><a href="#문제의-해결">문제의 해결</a></li>
+<li><a href="#추가적인-고려사항">추가적인 고려사항</a></li>
+<li><a href="#혹시-fetch-api를-쓰고-있다면">혹시 fetch API를 쓰고 있다면</a></li>
+<li><a href="#결론">결론</a></li>
+<li><a href="#글쓴이에-대해서">글쓴이에 대해서</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+
+  
+  
+</body>
+
+</html>

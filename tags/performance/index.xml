@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Performance on ang.dev</title>
+    <link>https://ang.dev/tags/performance/</link>
+    <description>Recent content in Performance on ang.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Mon, 02 Jan 2017 10:17:32 +0000</lastBuildDate>
+    
+	<atom:link href="https://ang.dev/tags/performance/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>SPA 초기 로딩 속도 개선하기</title>
+      <link>https://ang.dev/posts/2017-01-02_spa-loading-time/</link>
+      <pubDate>Mon, 02 Jan 2017 10:17:32 +0000</pubDate>
+      
+      <guid>https://ang.dev/posts/2017-01-02_spa-loading-time/</guid>
+      <description>SPA 초기 로딩 속도 개선하기 Code Splitting &amp;amp; Chunking TL;DR 초기 로딩 시간 개선을 위해 Chunking 을 해보자 Webpack 을 활용하면 Code Split 을 쉽게 할 수 있다 Chunk Optimization 을 통해서 효과를 극대화시키자 이 글은 이전 글인 SPA</description>
+    </item>
+    
+  </channel>
+</rss>

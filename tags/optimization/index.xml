@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Optimization on ang.dev</title>
+    <link>https://ang.dev/tags/optimization/</link>
+    <description>Recent content in Optimization on ang.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Wed, 24 Aug 2016 05:40:21 +0000</lastBuildDate>
+    
+	<atom:link href="https://ang.dev/tags/optimization/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>SPA 스크립트 용량 어디까지 줄일 수 있을까</title>
+      <link>https://ang.dev/posts/2016-08-24_spa-script-optimization/</link>
+      <pubDate>Wed, 24 Aug 2016 05:40:21 +0000</pubDate>
+      
+      <guid>https://ang.dev/posts/2016-08-24_spa-script-optimization/</guid>
+      <description>SPA 스크립트 용량 어디까지 줄일 수 있을까 최대한 줄여보고자 하는 당신을 위한 안내서 TL;DR Kill Your Dependencies 닭 잡는데 소 잡는 칼을 쓰지 말자 동적 Require 가 사용되는 경우에는 힌트를 주자 ES2015+</description>
+    </item>
+    
+  </channel>
+</rss>

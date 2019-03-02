@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ang.dev</title>
+    <link>https://ang.dev/</link>
+    <description>Recent content on ang.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Fri, 01 Mar 2019 16:57:57 +0900</lastBuildDate>
+    
+	<atom:link href="https://ang.dev/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>https://ang.dev/about/</link>
+      <pubDate>Fri, 01 Mar 2019 16:57:57 +0900</pubDate>
+      
+      <guid>https://ang.dev/about/</guid>
+      <description>Chulju Hong (angdev) github | me@ang.dev I&amp;rsquo;m a Technical Debt Payer Software Engineer. I&amp;rsquo;m interested in Distributed Computing, Programming Language. Work Experience Hyperconnect Backend Engineer (2017.03 - present) Maintaining Azar API server written in Java programming language Managing backend infrastructure related to Azar API server (CI/CD, Microservices, Monitoring, Log Aggregation, &amp;hellip;) Breaking a monolith into microservices (Matching, Messaging, &amp;hellip;) Developed WebRTC gateway broker server using Kotlin and Netty Futurewiz Backend</description>
+    </item>
+    
+    <item>
+      <title>포켓몬 고 나왔니?</title>
+      <link>https://ang.dev/posts/2017-01-27_pokemon-go/</link>
+      <pubDate>Fri, 27 Jan 2017 08:11:33 +0000</pubDate>
+      
+      <guid>https://ang.dev/posts/2017-01-27_pokemon-go/</guid>
+      <description>포켓몬 고 나왔니? 178일간의 기록 안녕하세요. 포켓몬 고 나왔니? 봇주 @angdev 입니다. 이번에 포켓몬 고 나왔니 봇을 만들기부터 역할 완수까지의 과정이 즐거웠어서 이</description>
+    </item>
+    
+    <item>
+      <title>SPA 초기 로딩 속도 개선하기</title>
+      <link>https://ang.dev/posts/2017-01-02_spa-loading-time/</link>
+      <pubDate>Mon, 02 Jan 2017 10:17:32 +0000</pubDate>
+      
+      <guid>https://ang.dev/posts/2017-01-02_spa-loading-time/</guid>
+      <description>SPA 초기 로딩 속도 개선하기 Code Splitting &amp;amp; Chunking TL;DR 초기 로딩 시간 개선을 위해 Chunking 을 해보자 Webpack 을 활용하면 Code Split 을 쉽게 할 수 있다 Chunk Optimization 을 통해서 효과를 극대화시키자 이 글은 이전 글인 SPA</description>
+    </item>
+    
+    <item>
+      <title>내가 fetch API를 쓰지 못했던 이유</title>
+      <link>https://ang.dev/posts/2016-12-21_fetch-api/</link>
+      <pubDate>Wed, 21 Dec 2016 06:07:32 +0000</pubDate>
+      
+      <guid>https://ang.dev/posts/2016-12-21_fetch-api/</guid>
+      <description>내가 fetch API를 쓰지 못했던 이유 fetch API 는 완벽한가? TL;DR 많은 API 요청이 있는 SPA에선 페이지 전환 시 요청을 취소해주자 모든 라이브러리가 AJAX 요청 취소를 지원하지는 않</description>
+    </item>
+    
+    <item>
+      <title>SPA 스크립트 용량 어디까지 줄일 수 있을까</title>
+      <link>https://ang.dev/posts/2016-08-24_spa-script-optimization/</link>
+      <pubDate>Wed, 24 Aug 2016 05:40:21 +0000</pubDate>
+      
+      <guid>https://ang.dev/posts/2016-08-24_spa-script-optimization/</guid>
+      <description>SPA 스크립트 용량 어디까지 줄일 수 있을까 최대한 줄여보고자 하는 당신을 위한 안내서 TL;DR Kill Your Dependencies 닭 잡는데 소 잡는 칼을 쓰지 말자 동적 Require 가 사용되는 경우에는 힌트를 주자 ES2015+</description>
+    </item>
+    
+  </channel>
+</rss>
