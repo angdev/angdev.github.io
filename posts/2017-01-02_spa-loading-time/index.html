@@ -8,7 +8,7 @@
 <link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
 <link rel="stylesheet" href="/normalize.min.css">
 
-<link rel="stylesheet" href="/book.min.29d743ffb6d61ecbfc9bb21b7eab17d63b577d4bd547c3f095addb1c793ab1b1.css">
+<link rel="stylesheet" href="/">
 
 <!--
 Made with Book Theme
@@ -161,7 +161,7 @@ https://github.com/alex-shpak/hugo-book
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx">&lt;<span style="color:#f92672">Route</span> <span style="color:#a6e22e">path</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;courses/:courseId&#34;</span> <span style="color:#a6e22e">getComponent</span><span style="color:#f92672">=</span><span style="color:#e6db74">{(nextState,</span> <span style="color:#a6e22e">cb</span><span style="color:#960050;background-color:#1e0010">)</span> <span style="color:#960050;background-color:#1e0010">=</span>&gt; {
   <span style="color:#75715e">// do asynchronous stuff to find the components
 </span><span style="color:#75715e"></span>  <span style="color:#a6e22e">cb</span>(<span style="color:#66d9ef">null</span>, <span style="color:#a6e22e">Course</span>)
-}} <span style="color:#960050;background-color:#1e0010">/&gt;</span></code></pre></div>
+}} <span style="color:#f92672">/&gt;</span></code></pre></div>
 
 <p>getComponent 라는 props 가 있고, cb 라는 이름의 콜백에 불러온 컴포넌트를 넘겨줄 수 있도록 되어있다. 이제 일은 간단하다. 위의 getComponent 부분에 require.ensure 를 통해 불러온 모듈을 가져갈 수 있게 해주면 될 일이다.</p>
 
@@ -169,7 +169,7 @@ https://github.com/alex-shpak/hugo-book
   <span style="color:#a6e22e">require</span>.<span style="color:#a6e22e">ensure</span>([<span style="color:#e6db74">&#39;./course&#39;</span>], (<span style="color:#a6e22e">require</span>) =&gt; {
     <span style="color:#a6e22e">cb</span>(<span style="color:#66d9ef">null</span>, <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;./course&#39;</span>));
   });
-}} <span style="color:#960050;background-color:#1e0010">/&gt;</span></code></pre></div>
+}} <span style="color:#f92672">/&gt;</span></code></pre></div>
 
 <p>결과적으로 아래와 같이 코드를 수정하게 된다. 이렇게 해주면 Webpack 에서 Chunk 를 알아서 만들어주고, 생성되는 번들을 같이 CDN 등에 올려주면 추가적인 작업 없이도 잘 작동한다. (필자는 Webpack 2 를 beta 때부터 쓰면서 System.import 로 이를 구현했다)</p>
 
@@ -182,7 +182,7 @@ https://github.com/alex-shpak/hugo-book
   <span style="color:#a6e22e">require</span>.<span style="color:#a6e22e">ensure</span>([<span style="color:#e6db74">&#39;./course&#39;</span>], (<span style="color:#a6e22e">require</span>) =&gt; {
     <span style="color:#a6e22e">cb</span>(<span style="color:#66d9ef">null</span>, <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;./course&#39;</span>));
   });
-}} <span style="color:#960050;background-color:#1e0010">/&gt;</span></code></pre></div>
+}} <span style="color:#f92672">/&gt;</span></code></pre></div>
 
 <h2 id="chunk-optimization">Chunk Optimization</h2>
 

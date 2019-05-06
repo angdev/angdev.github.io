@@ -8,28 +8,8 @@
   </url>
   
   <url>
-    <loc>https://ang.dev/posts/2017-01-27_pokemon-go/</loc>
+    <loc>https://ang.dev/</loc>
     <lastmod>2019-03-02T11:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ang.dev/posts/2017-01-02_spa-loading-time/</loc>
-    <lastmod>2019-03-02T10:59:56+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ang.dev/posts/2016-12-21_fetch-api/</loc>
-    <lastmod>2019-03-02T10:59:55+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ang.dev/posts/2016-08-24_spa-script-optimization/</loc>
-    <lastmod>2019-03-02T10:59:54+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ang.dev/tags/ajax/</loc>
-    <lastmod>2019-03-02T10:59:55+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -40,49 +20,8 @@
   </url>
   
   <url>
-    <loc>https://ang.dev/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://ang.dev/tags/clojure/</loc>
     <lastmod>2019-03-02T11:00:00+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ang.dev/tags/fetch/</loc>
-    <lastmod>2019-03-02T10:59:55+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ang.dev/tags/front-end-development/</loc>
-    <lastmod>2019-03-02T10:59:56+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ang.dev/tags/frontend/</loc>
-    <lastmod>2019-03-02T10:59:54+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ang.dev/tags/javascript/</loc>
-    <lastmod>2019-03-02T10:59:56+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ang.dev/tags/optimization/</loc>
-    <lastmod>2019-03-02T10:59:54+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ang.dev/tags/performance/</loc>
-    <lastmod>2019-03-02T10:59:56+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -99,26 +38,8 @@
   </url>
   
   <url>
-    <loc>https://ang.dev/tags/promise/</loc>
-    <lastmod>2019-03-02T10:59:55+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ang.dev/tags/react/</loc>
-    <lastmod>2019-03-02T10:59:56+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ang.dev/tags/spa/</loc>
-    <lastmod>2019-03-02T10:59:54+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://ang.dev/tags/</loc>
-    <lastmod>2019-03-02T10:59:55+09:00</lastmod>
+    <lastmod>2019-03-02T11:00:00+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -129,14 +50,93 @@
   </url>
   
   <url>
+    <loc>https://ang.dev/posts/2017-01-27_pokemon-go/</loc>
+    <lastmod>2019-03-02T11:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ang.dev/tags/front-end-development/</loc>
+    <lastmod>2019-03-02T10:59:56+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ang.dev/tags/javascript/</loc>
+    <lastmod>2019-03-02T10:59:56+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ang.dev/tags/performance/</loc>
+    <lastmod>2019-03-02T10:59:56+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ang.dev/tags/react/</loc>
+    <lastmod>2019-03-02T10:59:56+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ang.dev/posts/2017-01-02_spa-loading-time/</loc>
+    <lastmod>2019-03-02T10:59:56+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ang.dev/tags/webpack/</loc>
     <lastmod>2019-03-02T10:59:56+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://ang.dev/</loc>
-    <lastmod>2019-03-01T23:20:57+09:00</lastmod>
+    <loc>https://ang.dev/tags/ajax/</loc>
+    <lastmod>2019-03-02T10:59:55+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ang.dev/tags/fetch/</loc>
+    <lastmod>2019-03-02T10:59:55+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ang.dev/tags/promise/</loc>
+    <lastmod>2019-03-02T10:59:55+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ang.dev/posts/2016-12-21_fetch-api/</loc>
+    <lastmod>2019-03-02T10:59:55+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ang.dev/tags/frontend/</loc>
+    <lastmod>2019-03-02T10:59:54+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ang.dev/tags/optimization/</loc>
+    <lastmod>2019-03-02T10:59:54+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ang.dev/posts/2016-08-24_spa-script-optimization/</loc>
+    <lastmod>2019-03-02T10:59:54+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ang.dev/tags/spa/</loc>
+    <lastmod>2019-03-02T10:59:54+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ang.dev/categories/</loc>
     <priority>0</priority>
   </url>
   
