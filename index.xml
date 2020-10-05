@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ang.dev</title>
@@ -6,7 +6,7 @@
     <description>Recent content on ang.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Fri, 01 Mar 2019 16:57:57 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 27 Jan 2017 08:11:33 +0000</lastBuildDate>
     
 	<atom:link href="https://ang.dev/index.xml" rel="self" type="application/rss+xml" />
     
@@ -17,7 +17,7 @@
       <pubDate>Fri, 01 Mar 2019 16:57:57 +0900</pubDate>
       
       <guid>https://ang.dev/about/</guid>
-      <description>Chulju Hong (angdev) github | me@ang.dev I&amp;rsquo;m a Technical Debt Payer Software Engineer. I&amp;rsquo;m interested in Distributed Computing, Programming Language. Work Experience Hyperconnect Backend Engineer (2017.03 - present) Maintaining Azar API server written in Java programming language Managing backend infrastructure related to Azar API server (CI/CD, Microservices, Monitoring, Log Aggregation, &amp;hellip;) Breaking a monolith into microservices (Matching, Messaging, &amp;hellip;) Developed WebRTC gateway broker server using Kotlin and Netty Futurewiz Backend</description>
+      <description>Chulju Hong (angdev) github | me@ang.dev I&amp;rsquo;m a Technical Debt Payer Software Engineer. I&amp;rsquo;m interested in Distributed Computing, Programming Language. Work Experience Hyperconnect Backend Platform Team Lead (2020.09 - current) Rejoined as Backend Platform Team Lead! SOOHO.IO CTO (2019.08 - 2020.09) Managed the backend infrastructure of the company Built, maintained several products, including Odin, TX-ray, etc. Hyperconnect Backend Engineer (2017.03 - 2019.08) Maintaining Azar API server written in Java programming</description>
     </item>
     
     <item>

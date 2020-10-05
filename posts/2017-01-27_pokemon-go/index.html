@@ -1,36 +1,19 @@
-<!DOCTYPE html>
-
-
-
-
-<html lang="en">
+<!DOCTYPE html><html>
 
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>
-  
-    
-    포켓몬 고 나왔니?
-  
- | ang.dev</title>
-
+<title>포켓몬 고 나왔니? | ang.dev</title>
 
 <link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link rel="stylesheet" href="/normalize.min.css">
 
-
-
-<link rel="stylesheet" href="/book.min.a3caa905766cf610e263c876d2f2d8477f59d64606267bcaeee26e73160f9285.css">
-
-
-<link rel="icon" href="/favicon.png" type="image/x-icon">
-
+<link rel="stylesheet" href="/book.min.29d743ffb6d61ecbfc9bb21b7eab17d63b577d4bd547c3f095addb1c793ab1b1.css">
 
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
 -->
-
   <link rel="stylesheet" href="/css/custom.css">
 </head>
 
@@ -49,213 +32,148 @@ https://github.com/alex-shpak/hugo-book
     
   
   
-  
 
   <style>
   nav ul a[href$="\2fposts\2f 2017-01-27_pokemon-go\2f "] {
       color: #004ed0;
   }
-  </style>
-
-<ul>
+  </style><ul>
 <li><a href="/about">About</a></li>
 <li><a href="/posts">Blog</a></li>
 </ul>
 
-
-
-
-
-</nav>
-
-
-  
 <script>
 (function() {
   var menu = document.querySelector('aside.book-menu nav')
   addEventListener('beforeunload', function(event) {
     localStorage.setItem('menu.scrollTop', menu.scrollTop)
   });
+
   menu.scrollTop = localStorage.getItem('menu.scrollTop')
 })()
 </script>
 
 
 
+</nav>
     </aside>
 
     <div class="book-page">
       <header class="align-center justify-between book-header">
   <label for="menu-control">
-    <img src="/svg/menu.svg" alt="Menu" />
+    <img src="/svg/menu.svg" />
   </label>
-  <strong>
-  
-    
-    포켓몬 고 나왔니?
-  
-</strong>
+  <strong>포켓몬 고 나왔니?</strong>
 </header>
 
       
-<article class="markdown">
-
-<h1 id="포켓몬-고-나왔니">포켓몬 고 나왔니?</h1>
-
+<article class="markdown"><h1 id="포켓몬-고-나왔니">포켓몬 고 나왔니?</h1>
 <h2 id="178일간의-기록">178일간의 기록</h2>
-
 <p>안녕하세요. <a href="https://twitter.com/pokegostat">포켓몬 고 나왔니?</a> 봇주 <a href="https://twitter.com/angdev_">@angdev</a> 입니다. 이번에 포켓몬 고 나왔니 봇을 만들기부터 역할 완수까지의 과정이 즐거웠어서 이를 글로 남기게 되었습니다. 포켓몬 고가 나오지 않았으면 큰 감흥은 없었겠지만, 마무리를 지을 수 있어서 정말 다행입니다.</p>
-
 <figure>
     <img src="/posts/2017-01-27_pokemon-go/images/1.png"/> <figcaption>
             <h4>봇의 마지막</h4>
         </figcaption>
 </figure>
 
-
 <h2 id="봇에-대해">봇에 대해</h2>
-
 <p>이 봇은 2016년 7월 29일부터 포켓몬 고 한국 출시일인 2017년 1월 23일까지 178일간 포켓몬 고가 나왔는지 트윗을 해왔습니다. 포켓몬 고가 나오면 즉시 “응” 이라는 트윗을 하고, 그렇지 않은 경우에는 “아니” 라는 트윗을 하게 되어있습니다. 사실 봇 뒤에 사람이 있는 경우도 많지만 이 봇의 경우는 <strong>자동 봇</strong>입니다.</p>
-
 <p>가끔 봇이나 봇주에게 “일일이 트윗한 점에 대해 고생하셨다” 라는 멘션을 주는 분도 계셨는데 전 아무 것도 하지 않았습니다. 봇이 다 알아서 했죠. 오히려 포켓몬 고 출시에 관한 뉴스가 뜰 때마다 팔로워분들께서 알려주셔서 이런 부분은 수동으로 트윗을 하는 경우가 있었습니다. 뉴스를 알려주신 분들께 이 자리를 빌어 감사의 말을 전합니다.</p>
-
 <h2 id="만들게-된-계기">만들게 된 계기</h2>
-
 <p>만들게 된 계기는 단순합니다. 제가 당시에 <a href="https://clojure.org/">Clojure</a> 라고 하는 프로그래밍 언어를 공부하고 있었습니다. 영어, 일본어도 그렇듯이 실제로 써봐야 실력이 느는 것처럼 프로그래밍 언어도 그렇기 때문에, 이걸로 뭔가 만들게 없을까 고민하다가 당시 <strong>포켓몬 고를 하러 울산 간절곶에 다녀왔던 것</strong>이 계기가 되어 포켓몬 고 출시를 알려주는 봇을 만들어야겠다고 생각했습니다.</p>
-
-<h2 id="기획">기획 (?)</h2>
-
+<h2 id="기획-">기획 (?)</h2>
 <p>이 봇의 존재 의의는 <strong>누구보다 빠르게 포켓몬 고를 사람들로 하여금 내려받을 수 있게 해주자</strong> 였습니다. 소식이야 전해듣고 제가 직접 트윗을 하루에 한 번씩 할 수도 있었겠지만, 그러기에는 앱 스토어에 출시되었을 시점에 제가 트윗을 할 수 있을 것이라는 보장이 없었습니다. 즉시성이 부족하죠. 그리고 제가 직접 주기적으로 앱 스토어에 들어가서 나왔나 검색해보고 트윗을 “응” 이라고 할 수는 없는 노릇이니 자동 봇으로 만들어야겠다고 생각했습니다.</p>
-
 <p>봇의 컨셉은 <a href="https://twitter.com/ismyhwdone">is my homework done</a> 이라는 트위터 계정에서 가져왔습니다.</p>
-
 <figure>
     <img src="/posts/2017-01-27_pokemon-go/images/2.png"/> <figcaption>
             <h4>is my homework done? no</h4>
         </figcaption>
 </figure>
 
-
 <p>오랜 기간 “아니” 라고 트윗하다가 “응” 이라고 한 마디 트윗할 때의 짠한 느낌을 생각하면서 컨셉을 차용하게 되었습니다.</p>
-
 <figure>
     <img src="/posts/2017-01-27_pokemon-go/images/3.png"/> <figcaption>
             <h4>그렇게 잡힌 포켓몬 고 나왔니? 의 컨셉</h4>
         </figcaption>
 </figure>
 
-
 <p>그리고 하루에 한 번만 트윗하는 것은 트위터의 정책으로부터 결정된 것도 있습니다. 트위터에서는 똑같은 내용의 트윗을 연달아서 트윗하는 것을 허용하지 않습니다. 아래와 같이 말이죠.</p>
-
 <figure>
     <img src="/posts/2017-01-27_pokemon-go/images/4.png"/> <figcaption>
             <h4>도배하지 않을게 트위터야</h4>
         </figcaption>
 </figure>
 
-
 <p>똑같은 내용의 트윗을 하고 싶으면 최소 하루의 기간을 둬야합니다. 그보다 짧은 기간 내에 같은 내용을 트윗을 쓰고 싶으면 트윗 끝에 랜덤한 문자열을 붙이는 등의 방법도 사용될 수 있는데, 그렇게까지는 할 필요가 없다고 느꼈고 하루 정도가 무난하겠다 싶었습니다.</p>
-
 <h2 id="구현">구현</h2>
-
 <p>이 봇의 동작 원리는 매우 매우 간단합니다. 전체적인 플로우는 아래와 같습니다.</p>
-
 <figure>
     <img src="/posts/2017-01-27_pokemon-go/images/5.jpeg"/> 
 </figure>
 
-
 <p>이 봇을 구현하기 위해서는 <strong>트윗하기, 작업 예약하기, 웹 페이지 가져오기</strong> 등의 작업이 필요합니다. 즉, 제가 새로이 배우는 언어로 이런 작업들을 해볼 수 있다는 것이 됩니다. 라이브러리를 쓰는 것이 많겠지만, 그 언어의 생태계를 살펴보는 것은 큰 도움이 될 것이라 생각했습니다.</p>
-
 <h3 id="포켓몬-고-나왔는지-확인하기">포켓몬 고 나왔는지 확인하기</h3>
-
 <p>App Store 의 경우는 같은 앱이라도 국가별 출시 여부에 따라 Apple Itunes 페이지가 다르게 보입니다. 이 점을 활용해서 한국 앱스토어에 출시되었는지 확인할 수 있습니다. 포켓몬 고의 한국 앱스토어 URL 은 <a href="https://itunes.apple.com/KR/app/Pokemon-go/id1094591345">https://itunes.apple.com/<strong><em>KR</em></strong>/app/Pokemon-go/id1094591345</a> 입니다. 가운데에 KR 부분이 대한민국에 대한 코드입니다.</p>
-
 <p>한국의 경우는 이제 출시되었기 때문에, 아래와 같은 페이지를 볼 수 있습니다.</p>
-
 <figure>
     <img src="/posts/2017-01-27_pokemon-go/images/6.png"/> <figcaption>
             <h4>한국 앱 스토어</h4>
         </figcaption>
 </figure>
 
-
 <p>반면에 포켓몬 고의 우크라이나 앱 스토어 URL은 <a href="https://itunes.apple.com/UA/app/Pokemon-go/id1094591345">https://itunes.apple.com/UA/app/Pokemon-go/id1094591345</a> 로 추정할 수 있는데, 이 페이지는 아래와 같은 모습을 보입니다. 얼마 전까지는 한국 앱 스토어도 이랬었죠.</p>
-
 <figure>
     <img src="/posts/2017-01-27_pokemon-go/images/7.png"/> <figcaption>
             <h4>우크라이나 앱 스토어</h4>
         </figcaption>
 </figure>
 
-
-<p>이 차이를 이용해서 출시 여부를 확인할 수 있으며, 포켓몬 고가 만약 출시된다면 <a href="https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&amp;amp;hl=ko">Google Play</a> 와 <a href="https://itunes.apple.com/KR/app/Pokemon-go/id1094591345?mt=8">App Store</a> 에 동시에 출시할 것이라 생각했고, 확인하기가 더 쉽기 때문에 일단 App Store 만 확인하기로 했습니다.</p>
-
+<p>이 차이를 이용해서 출시 여부를 확인할 수 있으며, 포켓몬 고가 만약 출시된다면 <a href="https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&amp;hl=ko">Google Play</a> 와 <a href="https://itunes.apple.com/KR/app/Pokemon-go/id1094591345?mt=8">App Store</a> 에 동시에 출시할 것이라 생각했고, 확인하기가 더 쉽기 때문에 일단 App Store 만 확인하기로 했습니다.</p>
 <h3 id="트윗하기">트윗하기</h3>
-
 <p>저는 Clojure 를 사용했기 때문에 Clojure Twitter Library 인 <a href="https://github.com/adamwynne/twitter-api">twitter-api</a> 를 사용했고, 이하 내용은 생략합니다. 트윗 시에 발생할 수 있는 예외에 대한 처리만 간단히 해주었습니다. 하루에 한 번 트윗하기 규칙에 대해서는 일단 트윗하고 에러가 나면 삼키는 식으로 구현할 수도 있었지만, 그냥 마지막 트윗 시각을 기록해두고 이를 활용해서 트윗하기 API 를 하루에 한 번만 호출하였습니다.</p>
-
 <h3 id="작업-예약하기">작업 예약하기</h3>
-
 <p>작업 예약에는 간단하게 cron 을 사용할 수도 있었지만, 비동기 처리를 Clojure 에서 어떻게 할 수 있는지 알아보고 싶었기 때문에 Clojure Scheduling Library 인 <a href="https://github.com/jarohen/chime">chime</a> 을 써서 30초 마다 포켓몬 고 출시 여부를 확인하게 했습니다.</p>
-
 <h3 id="배포하기">배포하기</h3>
-
 <p>이 작업물을 매우 매우 간단하게 Dockerize 하여 (다른 의존성도 딱히 없어서 할 게 없었고, <a href="https://leiningen.org/">Leiningen</a> 이 다 알아서 해줬습니다), 한국에서는 사용할 수 없는 AWS ECS (EC2 Container Service) 에 배포를 했습니다. ap-northeast-2 region 에서 서비스를 운영하는 사람으로써 ECS 를 사용해보고 싶었기 때문입니다.. 흑흑..</p>
-
 <figure>
     <img src="/posts/2017-01-27_pokemon-go/images/8.png"/> <figcaption>
             <h4>So Easy</h4>
         </figcaption>
 </figure>
 
-
 <p>그러나 ECS 에 띄운 컨테이너가 애플리케이션 크래시가 난 것도 아닌데 가끔 내려갔다가 새로 올라가는 모습이 여럿 관찰되자 (ECS Agent 문제로 보이는데 자세히 살펴보지는 못했습니다) 이를 값싼 EC2 에 Docker 를 깔아서 올리는 쪽으로 방향을 바꿨습니다. 그리고 한 번도 내려가지 않고 임무를 완수해주었습니다.</p>
-
 <figure>
     <img src="/posts/2017-01-27_pokemon-go/images/9.png"/> <figcaption>
             <h4>3일 전에 봇이 종료된 모습</h4>
         </figcaption>
 </figure>
 
-
 <h2 id="후기">후기</h2>
-
 <p>이렇게 간단해보이는 것 뒤에도 많은 작업이 필요하다는 것을 새삼 느끼게 되었습니다. 공부를 목적으로 시작한 것이었는데 생각보다 많은 분들께서 팔로우를 해주셔서 놀랐습니다. (그리고 Clojure 공부는 망했다고 합니다) 어느 정도의 사람들이 모이니, 포켓몬 고 출시 소식이 뜰 때마다 알려주시는 분들이 생겼습니다. 어쩌다보니 제가 소식을 사람들로부터 전해듣는 입장이 되더라구요. 그럴 때는 수동으로 트윗을 했습니다. 어쨌든 그와 관련된 소식을 전달해드리는게 이 봇의 목표였기 때문이죠.</p>
-
 <blockquote class="twitter-tweet"><p lang="ko" dir="ltr">* &quot;포켓몬고, 곧 한국 서비스 한다&quot;<a href="https://t.co/qJcSKWFrU3">https://t.co/qJcSKWFrU3</a></p>&mdash; 포켓몬 고 나왔니? (@pokegostat) <a href="https://twitter.com/pokegostat/status/797984370141212673?ref_src=twsrc%5Etfw">November 14, 2016</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
 
 <blockquote class="twitter-tweet"><p lang="ko" dir="ltr">[단독] 내일부터 ‘포켓몬고’ 국내 서비스 개시 (출처 : KBS 뉴스 | 네이버 뉴스) <a href="https://t.co/CIzPBaD1e9">https://t.co/CIzPBaD1e9</a></p>&mdash; 포켓몬 고 나왔니? (@pokegostat) <a href="https://twitter.com/pokegostat/status/823466066185568258?ref_src=twsrc%5Etfw">January 23, 2017</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-
 <p>아무래도 포켓몬 고에 관심을 가지신 분들이 팔로우를 하다보니, 포켓몬 고가 나오고 나서 정보 전달을 해주는 계정으로 바꾸면 안되냐고 하시는 분들도 계셨지만 저는 포켓몬 고 정보를 잘 전달해주실 분들이 새로이 나오지 않을까 생각합니다.</p>
-
 <figure>
     <img src="/posts/2017-01-27_pokemon-go/images/10.png"/> <figcaption>
             <h4>포켓몬 고 나왔니 봇에 대한 반응들</h4>
         </figcaption>
 </figure>
 
-
 <p>이렇게 포켓몬 고 나왔니? 에 대해서 정리를 해보았습니다. 이제 포켓몬 고도 나왔고, 봇도 할 일이 끝났고, 저도 포켓몬 고를 하러 집 앞에 있는 공원에 나갈 거기 때문에 이만 글을 줄이도록 하겠습니다. 다들 포켓몬 많이 잡으시길 바래요! 궁금한 점이 있으신 분은 <a href="https://twitter.com/angdev_">@angdev</a> 로 멘션 주시면 답변해드리도록 하겠습니다. 감사합니다 :)</p>
-
 <blockquote>
-<p>[](<a href="https://twitter.com/pokegostat/status/823665679438004224">https://twitter.com/pokegostat/status/823665679438004224</a>)</p>
+<p><a href="https://twitter.com/pokegostat/status/823665679438004224"></a></p>
 </blockquote>
-
 <h2 id="글쓴이에-대해서">글쓴이에 대해서</h2>
-
 <p><a href="https://twitter.com/angdev_">🍓앙데브🍓 (@angdev_) | Twitter</a></p>
-
 <p>취미로 프로그래밍 공부하는 사람입니다. 사실 전공도 컴퓨터 과학입니다. 생업으로 Ruby on Rails 를 하고 있지만 언제든지 새로운 걸 공부하고 싶어합니다. Docker 를 열심히 굴리는 중이고, AWS로 인프라 구축하는 것에 재미를 붙였습니다. Kubernetes 와 같은 Orchestration Tool 과 Ruby, Elixir, Javascript, C++ 등에 관심이 많습니다.</p>
 </article>
 
       
 
-      
     </div>
 
     
@@ -263,31 +181,29 @@ https://github.com/alex-shpak/hugo-book
   
   <aside class="book-toc fixed">
     <nav id="TableOfContents">
-<ul>
-<li><a href="#포켓몬-고-나왔니">포켓몬 고 나왔니?</a>
-<ul>
-<li><a href="#178일간의-기록">178일간의 기록</a></li>
-<li><a href="#봇에-대해">봇에 대해</a></li>
-<li><a href="#만들게-된-계기">만들게 된 계기</a></li>
-<li><a href="#기획">기획 (?)</a></li>
-<li><a href="#구현">구현</a>
-<ul>
-<li><a href="#포켓몬-고-나왔는지-확인하기">포켓몬 고 나왔는지 확인하기</a></li>
-<li><a href="#트윗하기">트윗하기</a></li>
-<li><a href="#작업-예약하기">작업 예약하기</a></li>
-<li><a href="#배포하기">배포하기</a></li>
-</ul></li>
-<li><a href="#후기">후기</a></li>
-<li><a href="#글쓴이에-대해서">글쓴이에 대해서</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#178일간의-기록">178일간의 기록</a></li>
+    <li><a href="#봇에-대해">봇에 대해</a></li>
+    <li><a href="#만들게-된-계기">만들게 된 계기</a></li>
+    <li><a href="#기획-">기획 (?)</a></li>
+    <li><a href="#구현">구현</a>
+      <ul>
+        <li><a href="#포켓몬-고-나왔는지-확인하기">포켓몬 고 나왔는지 확인하기</a></li>
+        <li><a href="#트윗하기">트윗하기</a></li>
+        <li><a href="#작업-예약하기">작업 예약하기</a></li>
+        <li><a href="#배포하기">배포하기</a></li>
+      </ul>
+    </li>
+    <li><a href="#후기">후기</a></li>
+    <li><a href="#글쓴이에-대해서">글쓴이에 대해서</a></li>
+  </ul>
 </nav>
   </aside>
 
 
 
   </main>
-  
+
   
   
 <script type="application/javascript">

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
@@ -10,43 +10,36 @@
   <url>
     <loc>https://ang.dev/</loc>
     <lastmod>2019-03-02T11:00:00+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ang.dev/tags/bots/</loc>
     <lastmod>2019-03-02T11:00:00+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ang.dev/tags/clojure/</loc>
     <lastmod>2019-03-02T11:00:00+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ang.dev/tags/pok%C3%A9mon-go/</loc>
     <lastmod>2019-03-02T11:00:00+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ang.dev/posts/</loc>
     <lastmod>2019-03-02T11:00:00+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ang.dev/tags/</loc>
     <lastmod>2019-03-02T11:00:00+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ang.dev/tags/twitter/</loc>
     <lastmod>2019-03-02T11:00:00+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -57,25 +50,21 @@
   <url>
     <loc>https://ang.dev/tags/front-end-development/</loc>
     <lastmod>2019-03-02T10:59:56+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ang.dev/tags/javascript/</loc>
     <lastmod>2019-03-02T10:59:56+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ang.dev/tags/performance/</loc>
     <lastmod>2019-03-02T10:59:56+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ang.dev/tags/react/</loc>
     <lastmod>2019-03-02T10:59:56+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -86,25 +75,21 @@
   <url>
     <loc>https://ang.dev/tags/webpack/</loc>
     <lastmod>2019-03-02T10:59:56+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ang.dev/tags/ajax/</loc>
     <lastmod>2019-03-02T10:59:55+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ang.dev/tags/fetch/</loc>
     <lastmod>2019-03-02T10:59:55+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ang.dev/tags/promise/</loc>
     <lastmod>2019-03-02T10:59:55+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -115,13 +100,16 @@
   <url>
     <loc>https://ang.dev/tags/frontend/</loc>
     <lastmod>2019-03-02T10:59:54+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ang.dev/tags/optimization/</loc>
     <lastmod>2019-03-02T10:59:54+09:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ang.dev/tags/spa/</loc>
+    <lastmod>2019-03-02T10:59:54+09:00</lastmod>
   </url>
   
   <url>
@@ -130,14 +118,7 @@
   </url>
   
   <url>
-    <loc>https://ang.dev/tags/spa/</loc>
-    <lastmod>2019-03-02T10:59:54+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://ang.dev/categories/</loc>
-    <priority>0</priority>
   </url>
   
 </urlset>
